@@ -1,139 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Airport Transfer Service Charlottesville VA — CHO, IAD, DCA, RIC | Golden Limousine</title>
-  <meta name="description" content="Flight-tracked airport transfers from Charlottesville to Dulles, Reagan, Richmond & all major airports. Golden Limousine LLC, DMV Licensed #3455. 434-481-5466." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airport Transfers Charlottesville VA | Golden Limousine LLC</title>
+<meta name="description" content="Flight-tracked airport transfers from Charlottesville to Dulles (IAD), Reagan National (DCA), Richmond (RIC) and more. Woman-owned luxury chauffeur service.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#080808;--deep:#0D0D0D;--gold:#C4973A;--gold2:#DFB96A;--cream:#F4EFE4;--gray:#7A7468;--light:#C8C2B6;--white:#FAFAF8}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:28px 60px;transition:all 0.4s ease;background:rgba(8,8,8,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(196,151,58,0.12)}
+.logo{font-family:'Tenor Sans',serif;font-size:17px;color:var(--cream);letter-spacing:0.1em;text-decoration:none}.logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:44px;list-style:none}
+.nav-links a{font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;color:var(--light);text-decoration:none;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-reserve{color:var(--gold)!important;border:1px solid rgba(196,151,58,0.45);padding:10px 26px;transition:background 0.3s,color 0.3s!important}
+.nav-reserve:hover{background:var(--gold);color:var(--black)!important}
+.burger{display:none;flex-direction:column;gap:7px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:26px;height:1px;background:var(--gold);display:block}
+.mob-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9998;opacity:0;pointer-events:none;transition:opacity 0.4s ease}
+.mob-overlay.open{opacity:1;pointer-events:all}
+.mob-menu{position:fixed;inset:0;background:#080808;z-index:9999;flex-direction:column;justify-content:center;padding:0 10vw;transform:translateX(-100%);transition:transform 0.4s cubic-bezier(0.77,0,0.18,1);display:flex;pointer-events:none}
+.mob-menu.open{transform:translateX(0);pointer-events:all}
+.mob-menu a{font-family:'Tenor Sans',serif;font-size:clamp(28px,5vw,42px);color:var(--cream);text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:color 0.3s}
+.mob-menu a:hover{color:var(--gold)}
+.mob-close{position:absolute;top:28px;right:32px;background:none;border:none;color:var(--gray);font-size:28px;cursor:pointer;font-family:'Jost',sans-serif;font-weight:200;line-height:1}
+.page-hero{position:relative;height:60vh;min-height:400px;display:flex;align-items:flex-end;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(8,8,8,0.88) 0%,rgba(8,8,8,0.5) 100%)}
+.page-hero-ov2{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,var(--black),transparent)}
+.page-hero-body{position:relative;z-index:2;padding:0 8vw 64px}
+.page-eyebrow{font-size:9.5px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.page-h1{font-family:'Tenor Sans',serif;font-size:clamp(36px,6vw,72px);color:var(--white);line-height:1.05}
+.page-h1 em{font-style:italic;color:var(--gold2)}
+.sec-label{font-size:9px;letter-spacing:0.45em;text-transform:uppercase;color:var(--gold);margin-bottom:60px;display:flex;align-items:center;gap:20px}
+.sec-label::after{content:'';flex:none;width:48px;height:1px;background:var(--gold);opacity:0.35}
+.content-section{padding:100px 8vw;background:var(--black)}
+.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.content-h{font-family:'Tenor Sans',serif;font-size:clamp(26px,3.5vw,44px);color:var(--cream);line-height:1.2;margin-bottom:24px}
+.content-p{font-size:13.5px;color:var(--gray);line-height:1.9;margin-bottom:24px}
+.content-pts{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.content-pts li{display:flex;align-items:flex-start;gap:14px;font-size:13px;color:var(--gray);line-height:1.65}
+.content-pts li::before{content:'';width:22px;height:1px;background:var(--gold);flex-shrink:0;margin-top:10px}
+.btn-gold{font-size:10.5px;letter-spacing:0.28em;text-transform:uppercase;color:var(--black);background:var(--gold);padding:16px 38px;text-decoration:none;transition:background 0.3s,transform 0.25s;display:inline-block}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.sidebar-card{background:var(--deep);border-top:2px solid var(--gold);padding:40px 36px}
+.sidebar-card-h{font-family:'Tenor Sans',serif;font-size:20px;color:var(--cream);margin-bottom:16px}
+.sidebar-card-p{font-size:13px;color:var(--gray);line-height:1.75;margin-bottom:28px}
+.detail-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.detail-list li{font-size:12.5px;color:var(--light);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+.alt-section{background:var(--deep);padding:80px 8vw}
+.alt-h{font-family:'Tenor Sans',serif;font-size:clamp(24px,3vw,38px);color:var(--cream);margin-bottom:16px}
+.alt-p{font-size:13.5px;color:var(--gray);line-height:1.85;max-width:640px}
+.mq{background:var(--gold);height:40px;display:flex;align-items:center;overflow:hidden}
+.mq-track{display:flex;white-space:nowrap;animation:mq 22s linear infinite}
+.mq-track span{font-size:9.5px;letter-spacing:0.32em;text-transform:uppercase;color:var(--black);padding:0 30px;font-weight:400}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+footer{background:var(--black);border-top:1px solid rgba(196,151,58,0.12);padding:56px 8vw 32px}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,0.05);gap:48px}
+.ft-logo{font-family:'Tenor Sans',serif;font-size:18px;color:var(--cream);text-decoration:none;display:block;margin-bottom:12px;letter-spacing:0.08em}.ft-logo span{color:var(--gold)}
+.ft-tag{font-size:12px;color:var(--gray);line-height:1.65;max-width:220px}
+.ft-nav{display:flex;gap:60px}
+.ft-col-h{font-size:9.5px;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.ft-col a{display:block;font-size:12.5px;color:var(--gray);text-decoration:none;margin-bottom:10px;transition:color 0.3s}
+.ft-col a:hover{color:var(--cream)}
+.ft-bot{padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ft-copy{font-size:11px;color:rgba(122,116,104,0.55);letter-spacing:0.04em}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}
+@media(max-width:768px){
+nav{padding:20px 24px}.nav-links{display:none}.burger{display:flex}
+.page-hero{height:50vh}.page-hero-body{padding:0 24px 48px}
+.content-section{padding:72px 24px}.content-grid{grid-template-columns:1fr;gap:48px}
+.alt-section{padding:60px 24px}
+footer{padding:48px 24px 28px}.ft-top{flex-direction:column}.ft-nav{flex-direction:column;gap:32px}.ft-bot{flex-direction:column;align-items:flex-start}}
+</style>
 </head>
 <body>
-
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-wordmark">
-    <span class="nav-word-gold">Golden</span>
-    <span class="nav-word-sub">Limousine</span>
-  </a>
-  <div class="nav-right">
-    <a href="tel:4344815466" class="nav-phone">434-481-5466</a>
-    <a href="contact.html" class="nav-reserve">Reserve &rarr;</a>
-  </div>
-  <div class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span></div>
+<nav>
+  <a href="index.html" class="logo"><span>Golden</span> Limousine</a>
+  <ul class="nav-links">
+    <li><a href="airport-transfers.html">Airport Transfers</a></li>
+    <li><a href="wine-beer-tours.html">Wine &amp; Beer Tours</a></li>
+    <li><a href="wedding-event.html">Weddings</a></li>
+    <li><a href="hourly-charter.html">Hourly Charter</a></li>
+    <li><a href="contact.html" class="nav-reserve">Reserve</a></li>
+  </ul>
+  <button class="burger" onclick="openM()" aria-label="Menu"><span></span><span></span></button>
 </nav>
-
-<div class="mobile-overlay" id="mobile-overlay">
-  <span class="mobile-close" id="mobile-close">Close</span>
-  <div class="mobile-overlay-inner">
-    <a href="index.html">Home</a>
-    <a href="airport-transfers.html">Airport Transfers</a>
-    <a href="wine-beer-tours.html">Wine &amp; Beer Tours</a>
-    <a href="wedding-event.html">Weddings &amp; Events</a>
-    <a href="hourly-charter.html">Hourly Charter</a>
-    <a href="contact.html">Reserve</a>
-  </div>
+<div class="mob-overlay" id="mobOverlay" onclick="closeM()"></div>
+<div class="mob-menu" id="mob">
+  <button class="mob-close" onclick="closeM()">&#x2715;</button>
+  <a href="index.html" onclick="closeM()">Home</a>
+  <a href="airport-transfers.html" onclick="closeM()">Airport Transfers</a>
+  <a href="wine-beer-tours.html" onclick="closeM()">Wine &amp; Beer Tours</a>
+  <a href="wedding-event.html" onclick="closeM()">Weddings &amp; Events</a>
+  <a href="hourly-charter.html" onclick="closeM()">Hourly Charter</a>
+  <a href="contact.html" onclick="closeM()">Reserve a Ride</a>
 </div>
-
 <section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="page-hero-eyebrow">Airport &amp; Cruise Terminal Transfers</p>
-    <h1>Every flight, met<br/>on time and ready.</h1>
+  <div class="page-hero-bg" style="background-image:url('https://images.pexels.com/photos/1309644/pexels-photo-1309644.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+  <div class="page-hero-ov"></div>
+  <div class="page-hero-ov2"></div>
+  <div class="page-hero-body">
+    <p class="page-eyebrow">Airport Transfers</p>
+    <h1 class="page-h1">Every Flight.<br><em>Every Time.</em></h1>
   </div>
 </section>
-
-<section class="interior-body">
-  <div class="interior-grid">
-    <div class="interior-content reveal">
-      <h2>Flight-tracked chauffeur service from Charlottesville to every major airport in the region.</h2>
-      <p>Golden Limousine provides premium airport transfer service for travelers departing from or arriving into the Charlottesville, Harrisonburg, and greater Central Virginia area. Whether you are headed to Dulles for an international departure or catching a regional flight out of CHO, we handle the logistics so you can focus on travel.</p>
-      <p>Your chauffeur monitors your flight from departure to touchdown. Early landings, delays, gate changes — we adjust in real time without a call from you. You clear baggage claim and your driver is waiting, name sign in hand.</p>
-      <p>We also serve cruise terminal transfers to Baltimore and the greater Mid-Atlantic region. Flat-rate pricing on every run, confirmed in advance, with no surge charges or surprise fees.</p>
-
-      <div class="airports-table">
-        <p class="airports-table-header">Airports Served</p>
-        <div class="airport-row">
-          <span class="airport-code">CHO</span>
-          <span class="airport-name">Charlottesville-Albemarle Airport</span>
-          <span class="airport-note">Local regional departures</span>
-        </div>
-        <div class="airport-row">
-          <span class="airport-code">IAD</span>
-          <span class="airport-name">Washington Dulles International</span>
-          <span class="airport-note">Most popular long-haul route</span>
-        </div>
-        <div class="airport-row">
-          <span class="airport-code">DCA</span>
-          <span class="airport-name">Ronald Reagan Washington National</span>
-          <span class="airport-note">Downtown D.C. access</span>
-        </div>
-        <div class="airport-row">
-          <span class="airport-code">RIC</span>
-          <span class="airport-name">Richmond International Airport</span>
-          <span class="airport-note">45 minutes south of Charlottesville</span>
-        </div>
-        <div class="airport-row">
-          <span class="airport-code">BWI</span>
-          <span class="airport-name">Baltimore Washington International</span>
-          <span class="airport-note">Southwest &amp; budget carrier hub</span>
-        </div>
-      </div>
-
-      <ul>
-        <li>Real-time flight tracking on every pickup — no call needed if your flight changes</li>
-        <li>Meet-and-greet inside the terminal with a name sign</li>
-        <li>Luggage handling included on every transfer</li>
-        <li>Cruise terminal pickups and drop-offs</li>
-        <li>24-hour dispatch — early mornings and late nights</li>
-        <li>Flat-rate pricing, confirmed before you book, no surge pricing</li>
+<div class="mq"><div class="mq-track">
+<span>Woman-Owned</span><span>&middot;</span><span>Veteran-Owned</span><span>&middot;</span><span>DMV Licensed #3455</span><span>&middot;</span><span>Bonded &amp; Insured</span><span>&middot;</span><span>Charlottesville, VA</span><span>&middot;</span>
+<span>Woman-Owned</span><span>&middot;</span><span>Veteran-Owned</span><span>&middot;</span><span>DMV Licensed #3455</span><span>&middot;</span><span>Bonded &amp; Insured</span><span>&middot;</span><span>Charlottesville, VA</span><span>&middot;</span>
+<span>Woman-Owned</span><span>&middot;</span><span>Veteran-Owned</span><span>&middot;</span><span>DMV Licensed #3455</span><span>&middot;</span><span>Bonded &amp; Insured</span><span>&middot;</span><span>Charlottesville, VA</span><span>&middot;</span>
+<span>Woman-Owned</span><span>&middot;</span><span>Veteran-Owned</span><span>&middot;</span><span>DMV Licensed #3455</span><span>&middot;</span><span>Bonded &amp; Insured</span><span>&middot;</span><span>Charlottesville, VA</span><span>&middot;</span>
+</div></div>
+<section class="content-section">
+  <div class="content-grid">
+    <div>
+      <div class="sec-label reveal">Airport Transfers</div>
+      <h2 class="content-h reveal">Flight-Tracked. Always On Time.</h2>
+      <p class="content-p reveal">We monitor your flight in real time so your driver is waiting when you land — not when you called. No waiting at the curb, no scrambling for a ride. Just a clean vehicle and a professional driver ready to go.</p>
+      <ul class="content-pts reveal">
+        <li>Dulles International (IAD) — Washington D.C.</li><li>Ronald Reagan National (DCA) — Arlington, VA</li><li>Richmond International (RIC) — Richmond, VA</li><li>Charlottesville-Albemarle (CHO) — Local airport</li><li>Baltimore Washington (BWI) — Available on request</li><li>Real-time flight tracking on every pickup</li><li>Meet and greet service inside the terminal</li>
       </ul>
+      <a href="contact.html" class="btn-gold reveal">Reserve Now</a>
     </div>
-
-    <div class="inquiry-box reveal reveal-d1">
-      <p class="inquiry-box-label">Book Your Transfer</p>
-      <h3>Ready when your flight lands.</h3>
-      <p>Submit a request online or call us directly to confirm your pickup. We respond promptly and confirm all details in advance.</p>
-      <a href="tel:4344815466" class="inquiry-phone">434-481-5466</a>
-      <a href="contact.html" class="inquiry-link">Request a Transfer &nbsp;&rarr;</a>
+    <div class="sidebar-card reveal d1">
+      <h3 class="sidebar-card-h">Book Your Transfer</h3>
+      <p class="sidebar-card-p">Early morning flights, late night arrivals — we run 24 hours. Tell us your flight details and we handle the rest.</p>
+      <ul class="detail-list">
+        <li>Available 24/7</li><li>Flight tracking included</li><li>All terminals served</li><li>Meet &amp; greet available</li><li>No surge pricing</li>
+      </ul>
+      <a href="contact.html" class="btn-gold">Get in Touch</a>
     </div>
   </div>
 </section>
-
-<div class="cta-section">
-  <div class="cta-left reveal">
-    <h2>Your next flight<br/>deserves a better arrival.</h2>
-  </div>
-  <div class="cta-right reveal reveal-d1">
-    <div class="cta-divider"></div>
-    <div class="cta-right-links">
-      <a href="tel:4344815466">434-481-5466</a>
-      <a href="contact.html">Reserve Your Transfer &rarr;</a>
-    </div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-row-1">
-    <a href="index.html" class="footer-wordmark">Golden Limousine LLC</a>
-    <a href="tel:4344815466" class="footer-phone">434-481-5466</a>
-  </div>
-  <hr class="footer-hr" />
-  <div class="footer-row-2">
-    <nav class="footer-nav-links">
-      <a href="airport-transfers.html">Airport Transfers</a>
-      <a href="wine-beer-tours.html">Wine &amp; Beer Tours</a>
-      <a href="wedding-event.html">Weddings &amp; Events</a>
-      <a href="hourly-charter.html">Hourly Charter</a>
-      <a href="contact.html">Contact</a>
+<section class="alt-section reveal">
+  <h2 class="alt-h">Serving All Major Virginia Airports</h2>
+  <p class="alt-p">Whether you are flying out of Charlottesville-Albemarle or connecting through Dulles or Reagan National, Golden Limousine provides seamless, professional transportation across Central Virginia and the greater D.C. corridor.</p>
+  <br><br>
+  <a href="contact.html" class="btn-gold">Request a Reservation</a>
+</section>
+<footer>
+  <div class="ft-top">
+    <div><a href="index.html" class="ft-logo"><span>Golden</span> Limousine LLC</a><p class="ft-tag">Premium chauffeur service. Charlottesville, VA.<br>Woman-owned. Veteran-owned.</p></div>
+    <nav class="ft-nav">
+      <div class="ft-col"><div class="ft-col-h">Services</div><a href="airport-transfers.html">Airport Transfers</a><a href="wine-beer-tours.html">Wine &amp; Beer Tours</a><a href="wedding-event.html">Weddings &amp; Events</a><a href="hourly-charter.html">Hourly Charter</a></div>
+      <div class="ft-col"><div class="ft-col-h">Contact</div><a href="tel:4344815466">434-481-5466</a><a href="contact.html">Request a Reservation</a></div>
     </nav>
-    <span class="footer-cred">Charlottesville, VA &nbsp;&middot;&nbsp; Woman-Owned &nbsp;&middot;&nbsp; Veteran-Owned</span>
   </div>
-  <div class="footer-row-3">
-    <p>&copy; 2025 Golden Limousine LLC. Virginia DMV Licensed #3455. Bonded &amp; Insured.</p>
-  </div>
+  <div class="ft-bot"><p class="ft-copy">&copy; 2025 Golden Limousine LLC &nbsp;&middot;&nbsp; Virginia DMV Licensed #3455 &nbsp;&middot;&nbsp; Bonded &amp; Insured</p><p class="ft-copy">Charlottesville &middot; Harrisonburg &middot; Richmond &middot; Washington D.C.</p></div>
 </footer>
-
-<script src="script.js"></script>
+<script>
+function openM(){document.getElementById('mob').classList.add('open');document.getElementById('mobOverlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeM(){document.getElementById('mob').classList.remove('open');document.getElementById('mobOverlay').classList.remove('open');document.body.style.overflow=''}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
