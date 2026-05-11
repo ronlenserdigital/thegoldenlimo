@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Chauffeur in Charlottesville VA | Golden Limousine LLC</title>
+  <meta name="description" content="Reserve airport transfers, wine tours, wedding transportation or hourly charter in Charlottesville, VA. Golden Limousine LLC — 434-481-5466. DMV Licensed #3455." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-wordmark">
+    <span class="nav-word-gold">Golden</span>
+    <span class="nav-word-sub">Limousine</span>
+  </a>
+  <div class="nav-right">
+    <a href="tel:4344815466" class="nav-phone">434-481-5466</a>
+    <a href="contact.html" class="nav-reserve">Reserve &rarr;</a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span></div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay">
+  <span class="mobile-close" id="mobile-close">Close</span>
+  <div class="mobile-overlay-inner">
+    <a href="index.html">Home</a>
+    <a href="airport-transfers.html">Airport Transfers</a>
+    <a href="wine-beer-tours.html">Wine &amp; Beer Tours</a>
+    <a href="wedding-event.html">Weddings &amp; Events</a>
+    <a href="hourly-charter.html">Hourly Charter</a>
+    <a href="contact.html">Reserve</a>
+  </div>
+</div>
+
+<main class="contact-page">
+  <!-- Left -->
+  <div class="contact-left reveal">
+    <h1>Let's get<br/>you there.</h1>
+    <div class="contact-phone-block">
+      <a href="tel:4344815466" class="contact-phone-num">434-481-5466</a>
+      <p class="contact-response">Call directly for urgent bookings. For all other inquiries, submit the form and we respond within one business day.</p>
+    </div>
+    <div class="contact-details-block">
+      <div class="contact-detail-item">
+        <strong>Location</strong>
+        <span>Charlottesville, Virginia</span>
+      </div>
+      <div class="contact-detail-item">
+        <strong>Service Areas</strong>
+        <span>Charlottesville &nbsp;·&nbsp; Harrisonburg<br/>Richmond &nbsp;·&nbsp; Washington D.C.</span>
+      </div>
+      <div class="contact-detail-item">
+        <strong>Airports</strong>
+        <span>CHO &nbsp;·&nbsp; IAD &nbsp;·&nbsp; DCA &nbsp;·&nbsp; RIC &nbsp;·&nbsp; BWI</span>
+      </div>
+      <div class="contact-detail-item">
+        <strong>Availability</strong>
+        <span>24 hours, 7 days — including early mornings and late nights</span>
+      </div>
+      <div class="contact-detail-item">
+        <strong>Licensing</strong>
+        <span>Virginia DMV Licensed #3455<br/>Bonded &amp; Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Form -->
+  <div class="contact-form-wrap reveal reveal-d1">
+    <span class="form-label-eyebrow">Reservation Request</span>
+    <form id="contact-form" novalidate>
+      <input type="hidden" name="subject" value="New Reservation Request — Golden Limousine LLC" />
+      <input type="hidden" name="from_name" value="Golden Limousine Website" />
+      <input type="hidden" name="redirect" value="false" />
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input class="form-field" type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input class="form-field" type="tel" id="phone" name="phone" placeholder="Your number" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input class="form-field" type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service</label>
+        <select class="form-field" id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option>Airport Transfer</option>
+          <option>Wine &amp; Beer Tour</option>
+          <option>Wedding &amp; Event</option>
+          <option>Hourly Charter</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date of Trip</label>
+        <input class="form-field" type="date" id="date" name="date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-field" id="message" name="message" placeholder="Pickup location, destination, passenger count, flight number, or any other details that help us serve you well."></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Submit Request</button>
+      <div id="form-msg" class="form-msg" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-row-1">
+    <a href="index.html" class="footer-wordmark">Golden Limousine LLC</a>
+    <a href="tel:4344815466" class="footer-phone">434-481-5466</a>
+  </div>
+  <hr class="footer-hr" />
+  <div class="footer-row-2">
+    <nav class="footer-nav-links">
+      <a href="airport-transfers.html">Airport Transfers</a>
+      <a href="wine-beer-tours.html">Wine &amp; Beer Tours</a>
+      <a href="wedding-event.html">Weddings &amp; Events</a>
+      <a href="hourly-charter.html">Hourly Charter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <span class="footer-cred">Charlottesville, VA &nbsp;&middot;&nbsp; Woman-Owned &nbsp;&middot;&nbsp; Veteran-Owned</span>
+  </div>
+  <div class="footer-row-3">
+    <p>&copy; 2025 Golden Limousine LLC. Virginia DMV Licensed #3455. Bonded &amp; Insured.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
